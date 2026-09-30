@@ -1,93 +1,184 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3f0e9">
-  <meta name="description" content="offsite.movies creates warm, cinematic recap films for corporate offsites. The big moments. The little things. The feeling of being there.">
-  <title>offsite.movies — A good time. A great film.</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23282722'/%3E%3Ccircle cx='28' cy='32' r='15' fill='none' stroke='%23f3f0e9' stroke-width='8'/%3E%3Ccircle cx='50' cy='45' r='5' fill='%23c36a42'/%3E%3C/svg%3E">
+
+  <meta name="theme-color" content="#110B0B">
+
+  <meta name="description" content="dittopia.movies creates warm, cinematic recap films for corporate offsites. The big moments. The little things. The feeling of being there.">
+
+  <title>dittopia.movies — A good time. A great film.</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23110B0B'/%3E%3Ccircle cx='28' cy='32' r='15' fill='none' stroke='%23E3D28A' stroke-width='8'/%3E%3Ccircle cx='50' cy='45' r='5' fill='%23E02E0B'/%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="styles.css">
+
   <script defer src="films.js"></script>
+
   <script defer src="app.js"></script>
+
 </head>
+
 <body>
+
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="offsite.movies home">offsite.movies</a>
+
+    <a class="brand" href="#top" aria-label="dittopia.movies home">dittopia.movies</a>
+
     <nav aria-label="Main navigation">
-      <a href="#films">The films</a><a href="#capture">Our approach</a><a href="#team">The people</a><a class="nav-contact" href="#contact">Let’s talk <span class="tiny-circle"></span></a>
+
+      <a href="#films">Selected works</a><a href="#capture">Our approach</a><a href="#team">Our team</a><a class="nav-contact" href="#contact">Let’s talk <span class="tiny-circle"></span></a>
+
     </nav>
+
   </header>
+
   <main id="main">
+
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-heading page-pad">
-        <h1 id="hero-title">Out of office.<br>Into the moment<span class="accent">.</span></h1>
-        <div class="hero-aside"><p>We turn your corporate offsites<br class="desktop-break"> into films you can feel.</p><a class="text-link" href="#films">Take a look around <span class="line-mark"></span></a></div>
+
+      <div class="hero-stage">
+
+        <div class="hero-frame media-frame">
+
+          <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/coca-cola-poster.jpg" aria-label="Coca Cola corporate offsite recap film">
+
+            <source src="assets/coca-cola-web.mp4" type="video/mp4">
+
+          </video>
+
+          <div class="hero-shade"></div>
+
+        </div>
+
+        <div class="hero-foot">
+
+          <div class="hero-tags"><span>Media production</span><span>Corporate offsite films</span></div>
+
+          <div class="video-controls"><button id="hero-pause" type="button" aria-label="Pause opening film">Pause film</button><button id="hero-sound" type="button" aria-label="Turn on film sound" aria-pressed="false">Sound off</button></div>
+
+        </div>
+
       </div>
-      <div class="hero-frame media-frame">
-        <img src="assets/dinner.jpg" alt="Friends sharing a candlelit dinner outdoors — illustrative placeholder" fetchpriority="high" width="2200" height="1467">
-        <div class="hero-shade"></div>
-        <div class="frame-top"><span>GOOD PEOPLE. GOOD DAYS.</span><span class="placeholder-label">Placeholder footage</span></div>
-        <div class="hero-frame-bottom"><p>A good time.<br>A great film.</p><a class="round-link" href="#films" aria-label="Explore selected films"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 9 7-9 7Z"/></svg></a></div>
-        <span class="frame-time">OFFSITE.MOVIES / RECAP FILMS</span>
+
+      <div class="studio-intro page-pad">
+
+        <div class="studio-identity"><h1 id="hero-title">dittopia.movies</h1><p>Media production<br> for corporate offsites.</p></div>
+
+        <div class="studio-description"><h2>Your offsite. Our cameras. A film to keep.</h2><p>We’re a film production team dedicated to corporate offsites. From the first arrival to the last celebration, we capture the people, places, and moments that make your gathering yours—and turn them into a cinematic recap.</p><div class="intro-actions"><a class="primary-link" href="#contact">Plan your offsite film</a><a class="text-link" href="#films">View selected works</a></div></div>
+
       </div>
-      <div class="hero-foot page-pad"><span>Made for the moments in between.</span><span>Scroll to explore <span class="scroll-line"></span></span></div>
+
     </section>
 
-    <section class="selected section-space page-pad" id="films" aria-labelledby="films-title">
-      <div class="section-heading reveal"><div class="eyebrow"><span>01 / THE FILMS</span></div><h2 id="films-title">Wish you were<br><span class="muted">here. Again.</span></h2><p>The place. The people. That one perfect evening.<br>Films that bring it all back.</p></div>
-      <div class="film-grid">
-        <article class="film-card film-main reveal">
-          <button class="film-image media-frame" data-film="dinner" aria-label="Preview A little after hours placeholder"><img src="assets/dinner.jpg" alt="A warmly lit outdoor dinner with friends" width="1260" height="840" loading="lazy"><span class="film-badge">MOOD FRAME / 01</span><span class="film-preview">Preview frame <span class="plus">+</span></span></button>
-          <div class="film-caption"><h3>A little after hours</h3><span>Evenings together / Placeholder</span></div>
-        </article>
-        <article class="film-card film-offset reveal">
-          <button class="film-image media-frame" data-film="hike" aria-label="Preview The way out there placeholder"><img src="assets/hike.jpg" alt="A group of friends walking along a sunlit forest trail" width="1800" height="1200" loading="lazy"><span class="film-badge">MOOD FRAME / 02</span><span class="film-preview">Preview frame <span class="plus">+</span></span></button>
-          <div class="film-caption"><h3>The way out there</h3><span>A change of scene / Placeholder</span></div>
-        </article>
-        <article class="film-card film-wide reveal">
-          <button class="film-image media-frame" data-film="conversation" aria-label="Preview More than colleagues placeholder"><img src="assets/conversation.jpg" alt="Two people sharing a relaxed conversation over tea" width="1800" height="1200" loading="lazy"><span class="film-badge">MOOD FRAME / 03</span><span class="film-preview">Preview frame <span class="plus">+</span></span></button>
-          <div class="film-caption"><h3>More than colleagues</h3><span>The little moments / Placeholder</span></div>
-        </article>
-      </div>
-      <p class="placeholder-note">A glimpse of the mood. Actual offsite films coming soon.</p>
-    </section>
+
 
     <section class="capture section-space page-pad" id="capture" aria-labelledby="capture-title">
-      <div class="capture-intro reveal"><span class="eyebrow">02 / WHAT WE CAPTURE</span><h2 id="capture-title">The big moments.<br>The little things.<br><span class="muted">The feeling of it all.</span></h2></div>
-      <div class="capture-layout">
-        <div class="capture-image media-frame reveal"><img id="capture-photo" src="assets/hike.jpg" alt="Friends exploring a forest together" width="1800" height="1200" loading="lazy"><span class="photo-caption">A little further from the everyday.</span></div>
-        <div class="capture-details reveal">
-          <p class="capture-description">The best parts of an offsite don’t always make the agenda. We’re there for the planned highlights and the lovely, unscripted bits in between.</p>
-          <div class="capture-accordion">
-            <details open data-photo="assets/hike.jpg" data-alt="Friends exploring a forest together"><summary><span class="item-number">01</span><h3>A change of scene</h3><span class="accordion-icon"></span></summary><p>The journey there, the first look around, the space to slow down. We set the scene so your film takes you straight back.</p></details>
-            <details data-photo="assets/conversation.jpg" data-alt="A candid conversation over tea"><summary><span class="item-number">02</span><h3>People being people</h3><span class="accordion-icon"></span></summary><p>Shared jokes, new friendships, and the conversations between sessions. The small moments that make a team feel closer.</p></details>
-            <details data-photo="assets/dinner.jpg" data-alt="A group celebrating over a candlelit dinner"><summary><span class="item-number">03</span><h3>The energy, all together</h3><span class="accordion-icon"></span></summary><p>The cheers, the celebrations, the evening that nobody wanted to end. Cut together with a rhythm that feels like your day.</p></details>
-          </div>
-          <p class="interview-note">A story worth hearing? We can make room for a few voices, too.</p>
-        </div>
+
+      <div class="section-heading reveal"><h2 id="capture-title">Our approach</h2><p>The big moments.<br>&amp; The feeling of it all.</p></div>
+
+      <div class="service-grid">
+
+        <article class="service-card reveal"><img src="assets/coca-cola-poster.jpg" alt="The venue from our Coca Cola offsite recap" loading="lazy"><div class="service-copy"><p>Your offsite, on film</p><h3>Cinematic<br>recaps</h3></div></article>
+
+        <article class="service-card reveal"><img src="assets/dinner.jpg" alt="Illustrative evening celebration with colleagues" loading="lazy"><div class="service-copy"><p>From arrival to after-hours</p><h3>Event<br>coverage</h3></div></article>
+
+        <article class="service-card reveal"><img src="assets/hike.jpg" alt="Illustrative group exploring the outdoors" loading="lazy"><div class="service-copy"><p>The moments in between</p><h3>Candid<br>storytelling</h3></div></article>
+
+        <article class="service-card reveal"><img src="assets/conversation.jpg" alt="Illustrative candid conversation" loading="lazy"><div class="service-copy"><p>Bringing it all together</p><h3>Editing<br>&amp; sound</h3></div></article>
+
       </div>
+
     </section>
+
+
+
+    <section class="selected section-space page-pad" id="films" aria-labelledby="films-title">
+
+      <div class="section-heading reveal"><h2 id="films-title">Selected works</h2><p>Corporate offsite films.<br> Made to bring you back.</p></div>
+
+      <div class="film-grid">
+
+        <article class="film-card reveal">
+
+          <button class="film-image media-frame" data-film="dinner" aria-label="Open Coca Cola — together, offsite"><img src="assets/coca-cola-poster.jpg" alt="A moment from the Coca Cola offsite recap film" width="1280" height="720" loading="lazy"><span class="film-badge">OFFSITE FILM</span><span class="film-preview">Open film <span class="plus">+</span></span></button>
+
+          <div class="film-caption"><h3>Coca Cola — together, offsite</h3><span>Coca Cola / Recap film</span></div>
+
+        </article>
+
+        <article class="film-card reveal">
+
+          <button class="film-image media-frame" data-film="eshanya" aria-label="Open Eshanya Estates"><img src="assets/eshanya-estates-poster.jpg" alt="A still from Eshanya Estates" width="1280" height="720" loading="lazy"><span class="film-badge">SELECTED FILM</span><span class="film-preview">Open film <span class="plus">+</span></span></button>
+
+          <div class="film-caption"><h3>Eshanya Estates</h3><span>Selected film</span></div>
+
+        </article>
+
+        <article class="film-card reveal">
+
+          <button class="film-image media-frame" data-film="firstCut" aria-label="Open First Cut"><img src="assets/first-cut-poster.jpg" alt="A still from First Cut" width="1280" height="720" loading="lazy"><span class="film-badge">SELECTED FILM</span><span class="film-preview">Open film <span class="plus">+</span></span></button>
+
+          <div class="film-caption"><h3>First Cut</h3><span>Selected film</span></div>
+
+        </article>
+
+        <article class="film-card reveal">
+
+          <button class="film-image media-frame" data-film="smartlead" aria-label="Open SmartLead for Treemonks"><img src="assets/smartlead-treemonks-poster.jpg" alt="A still from SmartLead for Treemonks" width="1280" height="720" loading="lazy"><span class="film-badge">SELECTED FILM</span><span class="film-preview">Open film <span class="plus">+</span></span></button>
+
+          <div class="film-caption"><h3>SmartLead for Treemonks</h3><span>Selected film</span></div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
 
     <section class="team section-space page-pad" id="team" aria-labelledby="team-title">
-      <div class="team-top reveal"><span class="eyebrow">03 / OUR TEAM</span><h2 id="team-title">Good films start<br>with good people.</h2><p>Behind the camera. In the middle of it all.<br>We’re here to notice the moments, help you feel at ease, and turn a few good days into something you’ll keep.</p></div>
+
+      <div class="team-top reveal"><h2 id="team-title">Our team</h2><p>Behind the camera. In the middle of it all.<br>We’re here to notice the moments, help you feel at ease, and turn a few good days into something you’ll keep.</p></div>
+
       <div class="team-grid reveal">
-        <article class="team-person"><div class="portrait-placeholder"><span class="portrait-word">the<br>vision.</span><span class="portrait-note">PORTRAIT TO COME</span><span class="portrait-index">01</span></div><div class="person-caption"><h3>Direction</h3><span>Meet the team soon</span></div></article>
-        <article class="team-person"><div class="portrait-placeholder portrait-two"><span class="portrait-word">the<br>eye.</span><span class="portrait-note">PORTRAIT TO COME</span><span class="portrait-index">02</span></div><div class="person-caption"><h3>Behind the lens</h3><span>Meet the team soon</span></div></article>
-        <article class="team-person"><div class="portrait-placeholder portrait-three"><span class="portrait-word">the<br>feeling.</span><span class="portrait-note">PORTRAIT TO COME</span><span class="portrait-index">03</span></div><div class="person-caption"><h3>In the edit</h3><span>Meet the team soon</span></div></article>
+
+        <article class="team-person"><div class="team-portrait"><img src="assets/deon-portrait.jpg" alt="Deon, Director of Photography" width="1067" height="1600" loading="lazy"></div><div class="person-caption"><h3>Deon</h3><span>Director of Photography</span></div></article>
+
+        <article class="team-person"><div class="team-portrait"><img src="assets/dhananjay-portrait.jpg" alt="Dhananjay, Producer" width="1067" height="1600" loading="lazy"></div><div class="person-caption"><h3>Dhananjay</h3><span>Producer</span></div></article>
+
       </div>
+
     </section>
 
+
+
     <footer class="contact page-pad" id="contact">
-      <div class="contact-top reveal"><span class="eyebrow">NEXT STOP / YOUR OFFSITE</span><span>Let’s make something worth revisiting.</span></div>
-      <div class="contact-main reveal"><h2>Going somewhere<br>good<span class="accent">?</span></h2><div class="contact-options"><p>Tell us what you have in mind.</p><button class="contact-button" data-contact="email">Email us <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg></button><button class="contact-button secondary" data-contact="whatsapp">Chat on WhatsApp <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H5l-3 2V11.5a9.5 9.5 0 0 1 19 0Z"/><path d="M7 11h10"/></svg></button><span class="contact-note">Contact details coming soon.</span></div></div>
-      <a class="footer-wordmark" href="#top" aria-label="offsite.movies back to top">offsite.movies</a>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> offsite.movies</span><span>A little less ordinary. A little more us.</span><a href="#top">Back to top</a></div>
+
+      <div class="contact-top reveal"><span>Let’s make something worth revisiting.</span></div>
+
+      <div class="contact-main reveal"><h2>Let’s talk<span class="accent">.</span></h2><div class="contact-options"><h3>Get in touch</h3><p>Tell us where your team is headed.</p><button class="contact-button" data-contact="email">Email us <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg></button><button class="contact-button secondary" data-contact="whatsapp">Chat on WhatsApp <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H5l-3 2V11.5a9.5 9.5 0 0 1 19 0Z"/><path d="M7 11h10"/></svg></button></div></div>
+
+      <div class="footer-bottom"><span>© <span id="year">2026</span> dittopia.movies</span><span>A little less ordinary. A little more us.</span><a href="#top">Back to top</a></div>
+
     </footer>
+
   </main>
 
+
+
   <dialog class="film-dialog" id="film-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close preview">×</button><div class="dialog-media"><img id="dialog-image" src="assets/dinner.jpg" alt=""><video id="dialog-video" controls playsinline hidden></video></div><div class="dialog-caption"><span class="eyebrow">ILLUSTRATIVE MOOD FRAME</span><h2 id="dialog-title">A little after hours</h2><p id="dialog-description">A placeholder for an offsite film. The real recap will live here.</p></div></dialog>
+
   <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title"><button class="dialog-close" aria-label="Close contact details">×</button><span class="eyebrow">LET’S TALK</span><h2 id="contact-dialog-title">A conversation<br>starts here.</h2><p id="contact-message"></p><button class="simple-button" data-close-contact>Got it</button></dialog>
+
 </body>
+
 </html>
+
